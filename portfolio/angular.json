@@ -17,6 +17,8 @@
         "build": {
           "builder": "@angular/build:application",
           "options": {
+            "outputPath": "../docs",
+            "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
               "zone.js"
@@ -35,6 +37,8 @@
           },
           "configurations": {
             "production": {
+              "outputPath": "../docs",
+              "index": "src/index.html",
               "budgets": [
                 {
                   "type": "initial",
