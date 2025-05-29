@@ -1,0 +1,258 @@
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+  min-height: 100vh;
+  width: 82.5%;
+  margin-left: 17%;
+}
+
+.home img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  animation: imageScale 20s ease-in-out infinite alternate;
+  filter: brightness(0.7);
+}
+
+@keyframes imageScale {
+  0% { transform: scale(1) rotate(-1deg); }
+  100% { transform: scale(1.1) rotate(1deg); }
+}
+
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.fade-in {
+  animation: fadeInUp 0.8s ease-out forwards;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+@keyframes fadeInUp {
+  to { 
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in:nth-child(1) { animation-delay: 0.2s; }
+.fade-in:nth-child(2) { animation-delay: 0.4s; }
+.fade-in:nth-child(3) { animation-delay: 0.6s; }
+.fade-in:nth-child(4) { animation-delay: 0.8s; }
+
+.button {
+  display: inline-block;
+  padding: 12px 25px;
+  background: linear-gradient(135deg, #00b4d8 0%, #0077b6 100%);
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  margin: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0,180,216,0.3);
+  border: none;
+  font-weight: 500;
+}
+
+.button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0,180,216,0.5);
+  background: linear-gradient(135deg, #0077b6 0%, #00b4d8 100%);
+}
+
+.about-section {
+  padding: 50px 10px 30px;
+  text-align: center;
+  background: #f8f9fa;
+  position: relative;
+  overflow: hidden;
+  width: 83%;
+  margin-left: 17%;
+}
+
+.about-content {
+  width: 80%;
+  margin: 0 auto;
+  max-width: 800px;
+  position: relative;
+}
+
+.skills-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.skills-list li {
+  margin: 5px;
+  transition: transform 0.3s ease;
+  animation: skillSlide 0.5s ease-out forwards;
+  opacity: 0;
+}
+
+@keyframes skillSlide {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.skills-list li:nth-child(1) { animation-delay: 0.2s; }
+.skills-list li:nth-child(2) { animation-delay: 0.3s; }
+.skills-list li:nth-child(3) { animation-delay: 0.4s; }
+
+.skills-list img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  transition: all 0.3s ease;
+  filter: grayscale(100%);
+  padding: 10px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.skills-list img:hover {
+  filter: grayscale(0);
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+h1 {
+  font-size: 3.5rem;
+  margin-bottom: 15px;
+}
+
+h2 {
+  font-size: 2.5rem;
+  color: #2d2d2d;
+  margin-bottom: 30px;
+  position: relative;
+  display: inline-block;
+}
+
+h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: #0077b6;
+  border-radius: 2px;
+}
+
+/* RESPONSIVE FIXES */
+@media (max-width: 768px) {
+  .home, .about-section {
+      margin-left: 0;
+      padding: 0;
+      width: 100%;
+  }
+
+  .home {
+      min-height: auto;
+  }
+
+  .home img {
+      width: 100%;
+      height: auto;
+      display: block;
+      animation: mobileImageScale 20s ease-in-out infinite alternate;
+  }
+
+  @keyframes mobileImageScale {
+      0% { transform: scale(1); }
+      100% { transform: scale(1.05); }
+  }
+
+  .overlay {
+      width: 90%;
+      padding: 20px;
+  }
+
+  h1 {
+      font-size: 2.5rem;
+  }
+
+  h2 {
+      font-size: 1.8rem;
+  }
+
+  h2::after {
+      bottom: -8px;
+      height: 2px;
+  }
+
+  .button {
+      padding: 10px 20px;
+      font-size: 0.9rem;
+      display: block;
+      width: 90%;
+      max-width: 280px;
+      margin: 10px auto;
+  }
+
+  .about-section {
+      padding: 40px 10px 20px;
+  }
+
+  .skills-list {
+      gap: 10px;
+      margin-top: 20px;
+  }
+
+  .skills-list img {
+      width: 50px;
+      height: 50px;
+      padding: 8px;
+      border-radius: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+      font-size: 1.8rem;
+  }
+
+  h2 {
+      font-size: 1.5rem;
+  }
+
+  .skills-list img {
+      width: 40px;
+      height: 40px;
+  }
+
+  .button {
+      padding: 8px 16px;
+      font-size: 0.85rem;
+  }
+
+  .about-section {
+      padding: 30px 10px;
+  }
+}

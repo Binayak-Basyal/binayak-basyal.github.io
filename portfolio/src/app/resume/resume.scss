@@ -1,0 +1,113 @@
+/* Container */
+.container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%; /* Adjust for mobile */
+    max-width: 850px;
+    margin: 20px auto; /* Center on mobile */
+    box-sizing: border-box; /* Include padding in width */
+}
+
+/* Header */
+header {
+    text-align: center;
+}
+
+h1 {
+    color: #002c5f;
+    margin-bottom: 5px;
+    font-size: 2rem; /* Responsive font size */
+}
+
+h3 {
+    color: #444;
+    font-weight: normal;
+    margin-top: 0;
+    font-size: 1.2rem; /* Responsive font size */
+}
+
+.contact {
+    color: #007bff;
+    font-weight: bold;
+    font-size: 1rem; /* Responsive font size */
+}
+
+.bio {
+    font-style: italic;
+    font-size: 1rem; /* Responsive font size */
+    color: #3d3d3d;
+    margin-top: 10px;
+    line-height: 1.6; /* Improved readability */
+}
+
+/* Section Titles */
+h2 {
+    color: #002c5f;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+    margin-top: 20px;
+    font-size: 1.5rem; /* Responsive font size */
+}
+
+/* Row Layout */
+.row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap; /* Allow columns to wrap on smaller screens */
+}
+
+/* Columns */
+.column {
+    flex: 1;
+    min-width: 250px; /* Ensure columns have a minimum width */
+}
+
+/* Paragraphs */
+p {
+    color: #333;
+    font-size: 1rem; /* Responsive font size */
+    margin: 5px 0;
+    line-height: 1.6; /* Improved readability */
+}
+
+/* Horizontal Line */
+hr {
+    border: 0;
+    height: 1px;
+    background: #ddd;
+    margin: 20px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 95%; /* Further adjust width for smaller screens */
+        padding: 15px;
+        margin: 10px auto; /* Adjust margins */
+    }
+
+    .row {
+        flex-direction: column; /* Stack columns on small screens */
+        gap: 10px; /* Reduce gap */
+    }
+
+    .column {
+        min-width: auto; /* Allow columns to take full width */
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h3 {
+        font-size: 1.1rem;
+    }
+
+    .contact, .bio, p, h2 {
+        font-size: 0.95rem;
+    }
+}

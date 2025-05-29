@@ -1,0 +1,119 @@
+/* Sidebar Styling */
+.sidebar {
+  background-color: #1a202c;
+  color: white;
+  padding: 24px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 13%;
+  z-index: 1000;
+}
+
+/* Profile Image */
+.bslimg {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 1.5rem auto;
+}
+
+.bslimg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Sidebar Navigation */
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 2rem 0 0 1rem;
+}
+
+.sidebar ul li {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.sidebar ul li a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+ul li a i {
+  margin-right: 15px;
+}
+
+/* Social Icons */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.social-icons a {
+  font-size: 1.5rem;
+  color: rgb(190, 226, 243);
+}
+
+.social-icons a + a {
+  margin-left: 1rem;
+}
+
+/* Hide Sidebar on Mobile */
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+
+  /* Bottom Navigation Bar */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw; /* Use viewport width */
+  background-color: #1a202c;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0;
+  border-top: 1px solid #374151; /* Darker border for dark theme */
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+}
+
+.bottom-nav a {
+  color: white;
+  font-size: 1.5rem;
+  text-align: center;
+  display: flex; /* Ensure flexbox for centering */
+  flex-direction: column; /* Stack icons and text (if any) */
+  align-items: center; /* Center horizontally */
+  justify-content: center; /* Center vertically */
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none; /* Remove underline */
+}
+
+.nav-item.active {
+  color: #007bff; /* Or another accent color for your dark theme */
+}
+/* Optional: Adjust icon spacing or add text labels */
+}
+.bottom-nav a i {
+  margin-bottom: 4px; /* Space between icon and text if needed */
+}
+
+/* Optional: Add text labels below icons */
+.bottom-nav a span {
+  font-size: 0.8rem; /* Adjust text size */
+}
