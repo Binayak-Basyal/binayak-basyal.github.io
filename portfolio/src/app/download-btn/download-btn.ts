@@ -12,7 +12,7 @@ export class DownloadBtn {
 
     const a = document.createElement('a');
     a.href = fileUrl;
-    a.download = 'CV.pdf';
+    a.download = '/assets/Binayak basyal.pdf';
     a.click();
   }
 
